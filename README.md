@@ -3,6 +3,10 @@
 
 Generating clickable HTML website from hand drawnings using deep learning 
 
+![alt text][example]
+
+[example]: https://github.com/kzhoulatte/SketchTML/blob/master/webapp/flaskapp/static/imgs/example.png
+
 ## Prepare your environment:  
 
  - Python 3.6 is recommended; 
@@ -66,3 +70,7 @@ python evaluate_batch_guis.py --original_guis_filepath  {path/to/folder/with/ori
 ## Web APP:
 
 Please navigate to sketchtml.fun
+
+![alt text][webapp]
+
+[webapp]: https://github.com/kzhoulatte/SketchTML/blob/master/webapp/flaskapp/static/imgs/sketchtml_web.png
