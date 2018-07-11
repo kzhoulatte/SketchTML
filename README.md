@@ -65,4 +65,4 @@ python evaluate_batch_guis.py --original_guis_filepath  {path/to/folder/with/ori
 ```
 ## Web APP:
 
-Please navigate to [sketchtml.fun](https://www.sketchtml.fun)
+Please navigate to sketchtml.fun
