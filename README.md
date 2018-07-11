@@ -73,4 +73,4 @@ Please navigate to sketchtml.fun
 
 ![alt text][webapp]
 
-[webapp]: https://github.com/kzhoulatte/SketchTML/blob/master/webapp/flaskapp/static/imgs/sketchtml_web.png
+[webapp]: https://github.com/kzhoulatte/SketchTML/blob/master/webapp/flaskapp/static/imgs/webapp.png
