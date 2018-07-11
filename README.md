@@ -1,7 +1,7 @@
 
 # SketchTML 
 
-Generating clickable HTML website from hand drawnings using deep learning. 
+Generating clickable HTML website from hand drawnings using deep learning 
 
 ## Prepare your environment:  
 
@@ -11,9 +11,7 @@ Generating clickable HTML website from hand drawnings using deep learning.
 ```
 pip install -r requirements.txt
 ```
- - To install tensorflow with GPU support: 
-
-&nbsp; &nbsp; Install Anaconda 
+ - To install tensorflow with GPU support using Anaconda: 
 ```
 conda install -c anaconda tensorflow-gpu
 ```
@@ -27,16 +25,16 @@ python data_generation.py --html_output_path {path/to/html/output} --gui_output_
 ``` 
 python sketches_generation.py --html_input_path {path/to/html/output} --gui_input_path {path/to/gui/output} --screenshot_output_path {path/to/screenshots/output}
 ```
-* Large computer screen is recommended for auto screenshots to work correctly. 
+* Large computer screen is recommended for auto screenshots to work perfectly. 
 
 ## Training: 
 
- - Prepare data for training: 
+ - Move generated data for training: 
 ```
 sh ./move_data.sh 
 cd ../src/ 
 ```
- - From scratch: 
+ - Train from scratch: 
 ```
 python train.py --data_input_path './classes/dataset/data/' 
           --validation_split 0.2
@@ -45,7 +43,7 @@ python train.py --data_input_path './classes/dataset/data/'
           --augment_training_data 1
 ```
 
- - From pre-trained-model:
+ - Train from pre-trained-model:
 ```
 python train.py --data_input_path './classes/datasets/data/' 
           --validation_split 0.2 
@@ -67,4 +65,4 @@ python evaluate_batch_guis.py --original_guis_filepath  {path/to/folder/with/ori
 ```
 ## Web APP:
 
-&nbsp; &nbsp; sketchtml.fun
+Please navigate to sketchtml.fun
