@@ -21,11 +21,11 @@ conda install -c anaconda tensorflow-gpu
 ```
 ## Data Generation: 
 
- - Generate HTML and GUI files: 
+ - Generate HTML and GUI files with random layouts
 ``` 
 python data_generation.py --html_output_path {path/to/html/output} --gui_output_path {path/to/gui/output} --size_of_data 1000
 ```
- - Generate screenshots as sketches: 
+ - Take screenshots and save to be sketches: 
 ``` 
 python sketches_generation.py --html_input_path {path/to/html/output} --gui_input_path {path/to/gui/output} --screenshot_output_path {path/to/screenshots/output}
 ```
@@ -55,15 +55,35 @@ python train.py --data_input_path './classes/datasets/data/'
           --model_output_path './' 
           --model_json_file ./bin/model_json.json 
           --model_weights_file ./bin/pretrained_weights.h5 
-          --augment_training_data 1
+          --augment_training_data 1               
 ```
+## Converting to HTML Codes:
+
+ - Convert a single image: 
+```
+python convert_single_image.py --png_path {path/to/img.png} \
+      --output_folder {folder/to/output/html} \
+      --model_json_file {path/to/model/json_file.json} \
+      --model_weights_file {path/to/model/weights.h5}
+ ```
+ 
+ - Convert a batch of images: 
+
+```
+python convert_batch_of_images.py --pngs_path {path/to/folder/with/pngs} \
+      --output_folder {folder/to/output/html} \
+      --model_json_file {path/to/model/json_file.json} \
+      --model_weights_file {path/to/model/weights.h5}
+```
+
+
 ## Evaluation: 
 
-- evaluate single GUI prediction
+- Evaluate a single GUI prediction:
 ```
 python evaluate_single_gui.py --original_gui_filepath  {path/to/original/gui/file}  --predicted_gui_filepath {path/to/predicted/gui/file}
 ```
-- evaluate batch GUI prediction
+- Evaluate a batch of GUI predictions:
 ```
 python evaluate_batch_guis.py --original_guis_filepath  {path/to/folder/with/original/guis} --predicted_guis_filepath {path/to/folder/with/predicted/guis}
 ```
